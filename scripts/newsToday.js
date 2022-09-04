@@ -37,7 +37,7 @@ const getCategoryId = (event) => {
     categoryId = event.children[0].innerText;
     categoryName = event.innerText;
 
-    categoryNameField.innerText = `${categoryName}`;
+    categoryNameField.innerText = `in ${categoryName}`;
     getCategoryNews(categoryId);
 }
 
@@ -51,12 +51,11 @@ const getCategoryNews = (category_id) => {
 }
 
 const displayCategoryNews = (newsList) => {
-
     let newListLength;
     newListLength = newsList.length;
 
     const newsCountField = document.getElementById('news-count');
-    newsCountField.innerText = `${newListLength} news found in`;
+    newsCountField.innerText = `${newListLength} News Found`;
 
     // console.log(newsList);
     const newsFound = document.getElementById('newsFound');
@@ -162,3 +161,4 @@ const setNewsDetailsModal = (newsDetails) => {
 }
 
 getCategories();
+getCategoryNews('01');
